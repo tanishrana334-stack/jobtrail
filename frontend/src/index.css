@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+  display: block;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border: none;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand h1,
+.brand h2 {
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #111827;
+}
+
+.header .user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #374151;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #9ca3af;
+}
+
+.stat .num {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stat .label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.stat.Applied { border-top-color: #3b82f6; }
+.stat.Interview { border-top-color: #f59e0b; }
+.stat.Offer { border-top-color: #10b981; }
+.stat.Rejected { border-top-color: #ef4444; }
+
+.form-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  color: #111827;
+}
+
+input {
+  flex: 1;
+  min-width: 140px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button.danger {
+  background: #ef4444;
+}
+
+button.danger:hover {
+  background: #dc2626;
+}
+
+button.secondary {
+  background: #6b7280;
+}
+
+button.secondary:hover {
+  background: #4b5563;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.job {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: white;
+  border-left-width: 6px;
+}
+
+.job .info b {
+  font-size: 16px;
+}
+
+.job .info span {
+  color: #6b7280;
+}
+
+.job .date {
+  display: block;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.job .actions {
+  display: flex;
+  gap: 8px;
+}
+
+.status-Applied { border-left-color: #3b82f6; }
+.status-Interview { border-left-color: #f59e0b; }
+.status-Offer { border-left-color: #10b981; }
+.status-Rejected { border-left-color: #ef4444; }
+
+.login-box {
+  max-width: 360px;
+  margin: 80px auto;
+}
+
+.login-box h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.link {
+  text-align: center;
+  cursor: pointer;
+  color: #2563eb;
+  margin-bottom: 0;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.empty {
+  color: #6b7280;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 600px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
